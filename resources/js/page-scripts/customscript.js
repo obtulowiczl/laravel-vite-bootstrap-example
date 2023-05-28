@@ -1,5 +1,6 @@
-import { customAlert } from 'customAlert';
+import {customAlert} from './customAlert';
 
-let text = "I'm happy that's work!";
-
-customAlert(text);
+document.addEventListener('DOMContentLoaded', function () {
+    let text = "I'm happy that's work!\nThis alert was invoked from customscript.js";
+    customAlert(text);
+})

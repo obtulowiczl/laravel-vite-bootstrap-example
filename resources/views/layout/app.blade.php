@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('page-title')</title>
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
-    
-    @yield('page-scripts')
-    @yield('page-style')
+    @yield('page-styles')
 </head>
 <body>
     
     @yield('content')
-    
+    @yield('page-scripts')
 </body>
 </html>

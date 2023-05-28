@@ -30,6 +30,7 @@ RUN a2enmod rewrite
 RUN usermod -l sail www-data
 RUN groupmod -n sail www-data
 RUN usermod -u 1000 sail && groupmod -g 1000 sail
+RUN chown -R 1000:1000 /var/www
 
 COPY ./envvars /etc/apache2/envvars
 COPY ./apache2.conf /etc/apache2/apache2.conf
@@ -37,15 +38,13 @@ COPY ./sites-available /etc/apache2/sites-available
 COPY start-container /usr/local/bin/start-container
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-RUN a2enmod ssl
-
 RUN chmod +x /usr/local/bin/start-container
 
 # on production you can put your keys in docker/apache2/ssl/ and uncomment :443 in sites-available/000-default.conf
 #COPY ./ssl/fullchain.pem /etc/apache2/ssl/fullchain.pem
 #COPY ./ssl/privkey.pem /etc/apache2/ssl/privkey.pem
-# Expose port 80
-#EXPOSE 80
+#RUN a2enmod ssl
+
 
 # Start Apache2 service
 ENTRYPOINT ["start-container"]

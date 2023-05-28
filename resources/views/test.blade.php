@@ -1,9 +1,13 @@
 @extends('layout.app')
 @section('page-title', 'Bootstrap + Laravel in Vite!!')
+@section('page-styles')
+    @vite('resources/css/customstyle.css')
+@endsection
 @section('page-scripts')
 <!-- Remember to add your script to vite.config.js -->
 @vite('resources/js/page-scripts/customscript.js')
 @endsection
+
 @section('content')
 
 <div class="wrapper w-25 m-auto mt-5">
@@ -24,7 +28,8 @@
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Test bootstrap modal
                 </button>
-</div cla>
+    <p class="customstyle">Its paragraph with custom style from resources/css/customstyle.css</p>
+</div>
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
