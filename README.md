@@ -7,6 +7,30 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## About modyfications
+
+usage:
+- add `0.0.0.0 local.test` to your /ets/hosts then
+
+first run:
+```
+chmod +x ./firstrun.sh
+./firstrun.sh
+```
+
+Add a alias for sail:
+<a href="https://laravel.com/docs/10.x/sail#configuring-a-shell-alias">Configuring a shell alias in Laravel Sail</a>
+
+Now you can start/stop app with `sail up -d` / `sail down`
+
+You can also use live server:
+``` 
+sail npm run dev
+```
+Default its running on port :80, you can adjust it in .env
+
+Dont forget to `sail npm run build` to build your new assets :).
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
