@@ -7,6 +7,23 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## About modyfications
+
+usage:
+- add `0.0.0.0 local.test` to your /ets/hosts then
+```
+git clone https://github.com/obtulowiczl/laravel-vite-bootstrap-example.git
+cd laravel-vite-bootstrap-example
+sail up -d
+sail npm run build
+```
+
+or start live server with
+``` 
+sail npm run dev
+```
+Default its running on port :80, you can adjust it in .env
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
