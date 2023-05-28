@@ -7,23 +7,28 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About modyfications
+## Modyfications
+### How to use this repo:
+  - add `0.0.0.0 local.test` to your /ets/hosts
 
-usage:
-- add `0.0.0.0 local.test` to your /ets/hosts then
-
-first run:
+- Clone this repo:
+```
+git clone https://github.com/obtulowiczl/laravel-vite-bootstrap-example
+cd laravel-vite-bootstrap-example
+```
+- Run 'firstrun' script:
 ```
 chmod +x ./firstrun.sh
 ./firstrun.sh
 ```
 
-Add a alias for sail:
+- Add a alias for sail:
 <a href="https://laravel.com/docs/10.x/sail#configuring-a-shell-alias">Configuring a shell alias in Laravel Sail</a>
 
-Now you can start/stop app with `sail up -d` / `sail down`
+#### Now you can start/stop app with `sail up -d` / `sail down`
+Your app should be ready, try visit <a href="local.test">http://local.test</a>
 
-You can also use live server:
+### You can also use live server:
 ``` 
 sail npm run dev
 ```
